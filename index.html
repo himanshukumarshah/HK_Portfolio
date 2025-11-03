@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HK - Web Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"><a href="#hero">HK</a></div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div id="particles-js"></div> 
+
+            <div class="hero-content reveal reveal-from-left">
+                <h1 class="gradient-text">Hi, I'm Himanshu Kumar.</h1>
+                <p>I'm a <span id="typed-text"></span></p>
+                <a href="#projects" class="cta-button">View My Work</a>
+            </div>
+            <div class="hero-image reveal reveal-from-right">
+                <img src="./images/HK formal photo.jpg" alt="Your Name - Avatar" id="hero-avatar">
+            </div>
+        </section>
+
+        <section id="about" class="content-section">
+            <h2 class="reveal reveal-from-bottom">About Me</h2>
+            <p class="reveal reveal-from-bottom">Hi, I’m Himanshu Kumar, a B.Tech student in Computer Science and Engineering at VNIT Nagpur. I’m passionate about solving real-world problems through technology and design. My interests span across software development, product design, and AI-based applications. I love learning by building — from crafting efficient algorithms to designing user-friendly digital products.
+            </p>
+        </section>
+
+        <section id="skills" class="content-section alt-bg">
+            <h2 class="reveal reveal-from-bottom">Skills & Experience</h2>
+
+            <h3 class="reveal reveal-from-bottom">Experience</h3>
+            
+            <ol class="experience-list reveal reveal-from-bottom">
+                <li>
+                    Event Organizer – Aarohi 2025 (VNIT Nagpur)
+                    <ul>
+                        <li>Led sponsorship outreach and coordination with partners for one of Central India’s largest cultural festivals.</li>
+                        <li>Enhanced leadership, communication, and teamwork under high-pressure timelines.</li>
+                    </ul>
+                </li>
+                <li>
+                    Volunteer – Advantage Vidarbha 2025
+                    <ul>
+                        <li>Served as a “Buddy” for high-profile guests, managing hospitality and coordination.</li>
+                        <li>Developed strong professional communication and event management skills.</li>
+                    </ul>
+                </li>
+                <li>
+                    Academic Project – Pharmacy Management System
+                    <ul>
+                        <li>Developed a modular console-based system to manage medicines, batches, and suppliers using B-Trees for efficient data insertion and retrieval. Implemented custom file handling logic to save and load complex pointer linked structures in text format, ensuring full data persistence across sessions.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3 class="reveal reveal-from-bottom">Technical Skills</h3>
+            
+            <div class="technical-skills-list reveal reveal-from-bottom">
+                <p><strong>Programming Languages:</strong> Python, C, C++, Java, JavaScript</p>
+                <p><strong>Core Subjects:</strong> Data Structures & Algorithms, Operating Systems, Computer Networks, DBMS</p>
+                <p><strong>Frameworks/Tools:</strong> TensorFlow, Keras, OpenCV, VS code</p>
+                <p><strong>Other Skills:</strong> Web Development, UI/UX Design, Git & GitHub, Postman</p>
+                <p><strong>Soft Skills:</strong> Leadership, Communication, Public Speaking, Team Collaboration</p>
+            </div>
+        </section>
+
+        <section id="projects" class="content-section">
+            <h2 class="reveal reveal-from-bottom">Personal Projects</h2>
+            
+            <div class="projects-grid">
+                
+                <div class="project-card reveal reveal-from-bottom" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+                    <div class="project-image-container">
+                        <img src="./images/Project_blogs.png" alt="Project 1 Screenshot">
+                    </div>
+                    <div class="project-content">
+                        <h3>HK Blogs</h3>
+                        <p>A website meant for posting, updating and deleting blogs.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/himanshukumarshah/HKBlogs.git" target="_blank">Live Demo</a>
+                            <a href="https://github.com/himanshukumarshah/HKBlogs.git" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal reveal-from-bottom" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+                    <div class="project-image-container">
+                        <img src="./images/Project_BookLogs.png" alt="Project 2 Screenshot">
+                    </div>
+                    <div class="project-content">
+                        <h3>Book Logs</h3>
+                        <p>A book keeping website of read books with notes and learnings.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/himanshukumarshah/Book_logs.git" target="_blank">Live Demo</a>
+                            <a href="https://github.com/himanshukumarshah/Book_logs.git" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                </div>
+        </section>
+
+        <section id="education" class="content-section alt-bg">
+            <h2 class="reveal reveal-from-bottom">Education</h2>
+            <div class="education-table-wrapper reveal reveal-from-bottom">
+                <table class="education-table">
+                    <thead>
+                        <tr>
+                            <th>Degree/Course</th>
+                            <th>Institute/Board</th>
+                            <th>CGPA/Percentage</th>
+                            <th>Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>B.Tech, Computer Science and Engineering</td>
+                            <td>Visvesvaraya National Institute of Technology, Nagpur</td>
+                            <td>8.35</td>
+                            <td>2027</td>
+                        </tr>
+                        <tr>
+                            <td>CLASS XII (CBSE)</td>
+                            <td>St. Joseph Public School</td>
+                            <td>90 %</td>
+                            <td>2022</td>
+                        </tr>
+                        <tr>
+                            <td>CLASS X (CBSE)</td>
+                            <td>St. Joseph Public School</td>
+                            <td>91.6 %</td>
+                            <td>2020</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section  class="content-section">
+            <h2 class="reveal reveal-from-bottom">Recognition</h2>
+            <p><a href="https://drive.google.com/file/d/1sd020u9kuoT3b2SpNbIAuVzhXZZbPAax/view">Certificate</a> of Appreciation for volunteering at Advantage Vidarbha 2025, serving as a buddy for a VIP guest, and managing hospitality logistics.</p>
+        </section>
+
+        </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <h2 class="reveal reveal-from-bottom">Get In Touch</h2>
+            <p class="reveal reveal-from-bottom">
+                I'm always open to new opportunities and collaborations. Feel free to reach out!
+            </p>
+            <a href="mailto:hk@gmail.com" class="cta-button reveal reveal-from-bottom">Email Me</a>
+
+            <div class="footer-social-links reveal reveal-from-bottom">
+                <a href="https://www.linkedin.com/in/himanshu-kumar-52b709251" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/himanshukumarshah" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.instagram.com/_himanshu155/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                </div>
+
+            <p class="footer-copyright reveal reveal-from-bottom">
+                &copy; 2025 Himanshu Kumar. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

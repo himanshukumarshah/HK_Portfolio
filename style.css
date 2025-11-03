@@ -1,0 +1,528 @@
+/* --- "Cyber-Glow" Dark Theme Variables --- */
+:root {
+    --bg-dark-primary: #0a192f;  /* Deep navy background */
+    --bg-dark-secondary: #112240; /* Lighter navy for sections */
+    --text-light: #ccd6f6;      /* Light, soft text */
+    --text-medium: #8892b0;     /* Grey text for paragraphs */
+    --accent-1: #64ffda;        /* Bright teal/mint */
+    --accent-2: #a78bfa;        /* Vibrant purple */
+    --font-family: 'Poppins', sans-serif;
+    --box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.7);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    background-color: var(--bg-dark-primary);
+    color: var(--text-medium);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-1);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: var(--accent-2);
+}
+
+/* --- Header & Navigation --- */
+header {
+    background: rgba(10, 25, 47, 0.85); /* Translucent bg */
+    backdrop-filter: blur(10px);       /* Frosted glass effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-medium);
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.nav-links a:hover {
+    color: var(--accent-1);
+    transform: translateY(-2px);
+}
+
+/* --- Utility & General Section Styling --- */
+.content-section {
+    padding: 6rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow-x: hidden; /* Prevents horizontal scroll from animations */
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.alt-bg {
+    background-color: var(--bg-dark-secondary);
+}
+
+.cta-button {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid var(--accent-1);
+    color: var(--accent-1);
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: rgba(100, 255, 218, 0.1); /* Faint glow */
+    transform: scale(1.05);
+}
+
+/* --- INTERACTIVE: Scroll-Reveal Animations --- */
+.reveal {
+    opacity: 0;
+    /* This transition now applies to both opacity and transform */
+    transition: opacity 1s ease-out, transform 0.8s ease-out;
+}
+
+/* Define the starting "off-screen" positions */
+.reveal-from-bottom {
+    transform: translateY(50px);
+}
+.reveal-from-left {
+    transform: translateX(-50px);
+}
+.reveal-from-right {
+    transform: translateX(50px);
+}
+
+/* This "active" class is added by JS and resets the transform */
+.reveal.active {
+    opacity: 1;
+    transform: translate(0, 0); /* Resets X and Y */
+}
+
+
+/* --- Hero Section --- */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8rem 2rem 5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: 90vh;
+    position: relative; 
+    overflow: hidden; /* Keep particles contained */
+}
+
+/* --- NEW: Particle Background Styling --- */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0; 
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 2rem;
+    position: relative; 
+    z-index: 1;
+}
+
+.hero-image {
+    position: relative; 
+    z-index: 1; 
+}
+
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    color: var(--text-light);
+    /* Make it tall enough to not jump when text wraps */
+    min-height: 2.4em; 
+}
+
+.typed-cursor {
+    color: var(--accent-1);
+    font-size: 1.2rem;
+    animation: typed-blink 0.7s infinite;
+}
+@keyframes typed-blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Animated Gradient Text */
+.gradient-text {
+    background: linear-gradient(90deg, var(--accent-1), var(--accent-2), var(--accent-1));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient-flow 5s ease-in-out infinite;
+}
+
+@keyframes gradient-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* --- Skills & Experience Section --- */
+
+.content-section h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-light); /* Uses light text color from theme */
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Styling for the Experience list to match image */
+.experience-list {
+    list-style: decimal; /* Use numbers (1, 2, 3) */
+    list-style-position: outside;
+    padding-left: 1.5rem; /* Space for the numbers */
+    color: var(--text-light); 
+}
+
+.experience-list li {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-left: 0.5rem;
+}
+
+.experience-list ul {
+    list-style: disc; /* Use circle bullets */
+    list-style-position: outside;
+    padding-left: 2rem; /* Indent nested list */
+    margin-top: 0.75rem;
+}
+
+.experience-list ul li {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-medium); /* Softer color for sub-items */
+    margin-bottom: 0.5rem;
+}
+
+/* Styling for the Technical Skills list to match image */
+.technical-skills-list p {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+.technical-skills-list p strong {
+    font-weight: 600;
+    color: var(--text-light); /* Makes "Programming Languages:" bold */
+}
+
+.skills-container {
+    display: none;
+}
+
+/* --- Education Table Styling --- */
+.education-table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Ensures table is scrollable on small screens */
+    margin-top: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+    background-color: var(--bg-dark-secondary);
+}
+
+.education-table {
+    width: 100%;
+    border-collapse: collapse; /* Removes double borders */
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-light);
+    table-layout: fixed; /* Helps in consistent column widths */
+}
+
+.education-table th,
+.education-table td {
+    padding: 1.2rem 1rem;
+    text-align: left;
+    border: 1px solid var(--bg-dark-primary); 
+}
+
+.education-table thead th {
+    background-color: var(--accent-1); /* Teal header */
+    color: var(--bg-dark-primary); /* Dark text on teal */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.9rem;
+    border-color: var(--accent-1); /* Match header border to its background */
+}
+
+.education-table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.education-table tbody tr:hover {
+    background-color: rgba(167, 139, 250, 0.1); /* Light purple hover effect */
+}
+
+.education-table tbody td {
+    color: var(--text-medium);
+}
+
+.education-table tbody tr:nth-child(even) {
+    background-color: var(--bg-dark-primary); /* Stripe effect */
+}
+
+/* Specific column width adjustments for readability */
+.education-table th:nth-child(1), .education-table td:nth-child(1) { width: 30%; } /* Degree/Course */
+.education-table th:nth-child(2), .education-table td:nth-child(2) { width: 40%; } /* Institute */
+.education-table th:nth-child(3), .education-table td:nth-child(3) { width: 15%; text-align: center; } /* CGPA/Percentage */
+.education-table th:nth-child(4), .education-table td:nth-child(4) { width: 15%; text-align: center; } /* Year */
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .education-table th,
+    .education-table td {
+        padding: 0.8rem 0.5rem;
+        font-size: 0.9rem;
+    }
+    .education-table th:nth-child(3), .education-table td:nth-child(3),
+    .education-table th:nth-child(4), .education-table td:nth-child(4) {
+        width: 20%; /* Give more space to percentages and year */
+        text-align: center;
+    }
+    .education-table th:nth-child(1), .education-table td:nth-child(1) { width: 35%; }
+    .education-table th:nth-child(2), .education-table td:nth-child(2) { width: 25%; }
+}
+
+/* --- Projects Section --- */
+
+/* This creates the responsive grid */
+.projects-grid {
+    display: grid;
+    /* Creates responsive columns:
+      - Tries to fit as many 300px columns as it can.
+      - '1fr' lets them grow equally to fill the space.
+    */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem; /* The space between cards */
+}
+
+/* The card itself */
+.project-card {
+    background: var(--bg-dark-secondary);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden; /* Important for the 3D tilt */
+    
+    /* This is the key to aligning content vertically.
+      It makes the card a flex container.
+    */
+    display: flex;
+    flex-direction: column;
+    
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    /* This is CRUCIAL for the 3D tilt effect */
+    transform-style: preserve-3d;
+}
+
+/* The "glow" hover effect */
+.project-card:hover {
+    /* This is a fallback for browsers that don't get the tilt.
+      Tilt.js will override this, which is fine.
+    */
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(100, 255, 218, 0.2);
+}
+
+/* The image container at the top of the card */
+.project-image-container {
+    width: 100%;
+    height: 200px; /* Gives all cards a consistent image height */
+    overflow: hidden;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Stops images from stretching */
+    
+    /* This makes the image "pop out" in 3D space */
+    transform: translateZ(20px);
+}
+
+/* The container for all text content */
+.project-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+
+    /* This makes the text "pop out" even more */
+    transform: translateZ(40px);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: var(--text-medium);
+    margin-bottom: 1.5rem;
+
+}
+
+.project-links {
+    margin-top: auto;
+    padding-top: 1rem; /* Space above the links */
+}
+
+.project-links a {
+    margin-right: 1rem;
+    font-weight: 600;
+    color: var(--accent-1); /* Use theme accent color */
+    transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+    color: var(--accent-2); /* Use secondary accent on hover */
+}
+
+/* --- NEW: Combined Contact Footer --- */
+
+footer {
+    background: rgba(10, 25, 47, 0.85); /* Translucent bg */
+    backdrop-filter: blur(10px);       /* Frosted glass effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    
+}
+footer#contact {
+    background-color: var(--bg-dark-primary); /* Use the darkest background */
+    padding: 4rem 2rem 3rem; /* 4rem top, 3rem bottom */
+    text-align: center;
+    width: 100%;
+    margin-top: 4rem; /* Add space above the footer */
+    border-top: 1px solid var(--bg-dark-secondary); /* Subtle separator line */
+}
+
+/* This inner container keeps content aligned */
+.footer-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Heading "Get In Touch" */
+footer#contact h2 {
+    font-size: 2.5rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+/* The paragraph below the heading */
+footer#contact p {
+    font-size: 1.1rem;
+    color: var(--text-medium);
+    margin-bottom: 2rem;
+}
+
+/* The email button */
+footer#contact .cta-button {
+    margin-bottom: 3.5rem; 
+}
+
+/* Container for social media links */
+.footer-social-links {
+    margin-bottom: 3rem; /* Space below social links */
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Space between links */
+    flex-wrap: wrap;
+}
+
+.footer-social-links a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-medium);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social-links a:hover {
+    color: var(--accent-1); /* Glows with accent color on hover */
+    transform: translateY(-3px); /* Lifts up slightly */
+}
+
+/* The final copyright text */
+.footer-copyright {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    margin: 0; 
+}
